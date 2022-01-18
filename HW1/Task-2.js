@@ -20,7 +20,9 @@ message = '';
 
 //Решение
 var message;
-var login = "Pitter";
-message = (login == "Pitter") ? "Hi":
-(login == "Owner") ? "Hello":
-(login == "") ? "unknown" : "";
+var login = 'Owner';
+message = (login == 'Pitter') ? 'Hi':
+(login == 'Owner') ? 'Hello':
+(login == '') ? 'unknown' : '';
+
+console.log(message);
