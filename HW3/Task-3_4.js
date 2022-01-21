@@ -50,6 +50,3 @@ function f(a) {
 var a;
 var dayWeek = f(5);
 console.log ( 'День недели ' + '-' + ' ' + dayWeek );
-
-
-
