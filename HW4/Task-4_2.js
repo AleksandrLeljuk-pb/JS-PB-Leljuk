@@ -36,7 +36,7 @@ function f(item, i, arr) {
         return item;
     } else return 'undefined'    
 }
-var arr = [1,2,3];
+var arr = [1,2,3,-7,15,0.5,-1,-2,4];
 var arrFilt = newFilter(arr,f);
 console.log('первинний масив')
 console.log( arr );
