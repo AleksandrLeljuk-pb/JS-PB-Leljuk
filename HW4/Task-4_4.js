@@ -1,7 +1,7 @@
 /*
-####Задача 3
+####Задача 4
 
-Создать имплементацию функции `every`, логика работы такая же как и у родного метода.
+Создать имплементацию функции `some`, логика работы такая же как и у родного метода.
 
 Функция должна содержать проверки:
 
@@ -10,13 +10,11 @@
 
 ```javascript
 const arr = [1,2,3];
-every(arr, function(item, i, arr) {});
-```
+some(arr, function(item, i, arr) {});
 */
 
 //Solution
-
-function newEvery(arr,f) {
+function newSome(arr,f) {
     if(!Array.isArray(arr)) {
         throw new Error ('змінна arr має бути масивом');
     }
@@ -24,21 +22,22 @@ function newEvery(arr,f) {
         throw new Error ('змінна fsq має бути функцією')
     }   
     for(var i = 0; i < arr.length; i++) {
-        if (f(arr[i], i, arr) == 'thrue' && (i+1) == arr.length) {
-            return 'thrue'
-        } if(f(arr[i], i, arr) !== 'thrue') {
+        if (f(arr[i], i, arr) !== 'thrue' && (i+1) == arr.length) {
             return 'false'
+        } if(f(arr[i], i, arr) == 'thrue') {
+            return 'thrue';
+            break;
         }
     }    
 }
 function f(item, i, arr) {    
-    if(item > 1) {
+    if(item > 100) {
         return 'thrue';
-    }  
+    } else return 'false' 
 }
-var arr = [111,2,3,7,15,110.5,111,2,-4];
-var arrEvery = newEvery(arr,f);
+var arr = [11,2,11,7,15,10.5,11,2,-4];
+var arrSome = newSome(arr,f);
 console.log('масив, що перевіряється')
 console.log( arr );
-console.log('результат перевірки елементів масиву на умову ">1" :');
-console.log( arrEvery );
+console.log('результат перевірки хоча б одного елементу масиву на умову ">100" :');
+console.log( arrSome );
