@@ -19,7 +19,7 @@ function newSome(arr,f) {
         throw new Error ('змінна arr має бути масивом');
     }
     if(typeof f !== 'function') {
-        throw new Error ('змінна fsq має бути функцією')
+        throw new Error ('змінна f має бути функцією')
     }   
     for(var i = 0; i < arr.length; i++) {
         if (f(arr[i], i, arr) !== 'thrue' && (i+1) == arr.length) {
@@ -33,9 +33,9 @@ function newSome(arr,f) {
 function f(item, i, arr) {    
     if(item > 100) {
         return 'thrue';
-    } else return 'false' 
+    } 
 }
-var arr = [11,2,11,7,15,10.5,11,2,-4];
+var arr = [11,2,11,7,115,10.5,11,2,-4];
 var arrSome = newSome(arr,f);
 console.log('масив, що перевіряється')
 console.log( arr );

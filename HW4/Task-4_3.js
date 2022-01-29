@@ -21,7 +21,7 @@ function newEvery(arr,f) {
         throw new Error ('змінна arr має бути масивом');
     }
     if(typeof f !== 'function') {
-        throw new Error ('змінна fsq має бути функцією')
+        throw new Error ('змінна f має бути функцією')
     }   
     for(var i = 0; i < arr.length; i++) {
         if (f(arr[i], i, arr) == 'thrue' && (i+1) == arr.length) {

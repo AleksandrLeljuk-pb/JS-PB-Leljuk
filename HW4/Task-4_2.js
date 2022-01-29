@@ -21,7 +21,7 @@ function newFilter(arr,f) {
         throw new Error ('змінна arr має бути масивом');
     }
     if(typeof f !== 'function') {
-        throw new Error ('змінна fsq має бути функцією')
+        throw new Error ('змінна f має бути функцією')
     }
     //var nArr = [];  - чому не спрацьовує коли масив об’являється в цьому місті????
     for(var i = 0; i < arr.length; i++) {
